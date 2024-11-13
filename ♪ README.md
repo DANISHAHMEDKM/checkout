@@ -1,25 +1,34 @@
-[![Build and Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
+       </p>DANISHAHMEDKM</p>
 
-# Checkout V4
+      ## 
 
-This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
 
-Only a single commit is fetched by default, for the ref/SHA that triggered the workflow. Set `fetch-depth: 0` to fetch all history for all branches and tags. Refer [here](https://docs.github.com/actions/using-workflows/events-that-trigger-workflows) to learn which commit `$GITHUB_SHA` points to for different events.
 
-The auth token is persisted in the local git config. This enables your scripts to run authenticated git commands. The token is removed during post-job cleanup. Set `persist-credentials: false` to opt-out.
 
-When Git 2.18 or higher is not in your PATH, falls back to the REST API to download the files.
+      [![Build and Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
 
-# What's new
+        # Checkout V4
+   
+        This action checks-out your repository under `$GITHUB_WORKSPACE`, 
+          so your workflow can access it.
 
-Please refer to the [release page](https://github.com/actions/checkout/releases/latest) for the latest release notes.
+     Only a single commit is fetched by default, for the ref/SHA that triggered the workflow. Set `fetch-depth: 0` to fetch all history for all branches and tags. Refer [here](https://docs.github.com/actions/using-workflows/events-that- 
+       c          trigger-workflows) to learn which commit `$GITHUB_SHA` points to for different events.
 
-# Usage
+       The auth token is persisted in the local git config. This enables your scripts to run authenticated git commands. The token is removed during post-job cleanup. Set `persist-credentials: false` to opt-out.
+
+    When Git 2.18 or higher is not in your PATH, falls back to the REST API to download the files.
+
+      # What's new
+
+      Please refer to the [release page](https://github.com/actions/checkout/releases/latest) for the latest release notes.
+
+      # Usage
 
 <!-- start usage -->
-```yaml
-- uses: actions/checkout@v4
-  with:
+          ```yaml
+     - uses: actions/checkout@v4
+     with:
     # Repository name with owner. For example, actions/checkout
     # Default: ${{ github.repository }}
     repository: ''
@@ -153,11 +162,11 @@ Please refer to the [release page](https://github.com/actions/checkout/releases/
     sparse-checkout: .
 ```
 
-## Fetch only the root files and `.github` and `src` folder
+      ## Fetch only the root files and                                `.github` and `src` folder
 
-```yaml
-- uses: actions/checkout@v4
-  with:
+      ```yaml
+       - uses: actions/checkout@v4
+   with:
     sparse-checkout: |
       .github
       src
@@ -211,7 +220,7 @@ Please refer to the [release page](https://github.com/actions/checkout/releases/
   with:
     repository: my-org/my-tools
     path: my-tools
-```
+      ```
 > - If your secondary repository is private you will need to add the option noted in [Checkout multiple repos (private)](#Checkout-multiple-repos-private)
 
 ## Checkout multiple repos (nested)
@@ -225,7 +234,7 @@ Please refer to the [release page](https://github.com/actions/checkout/releases/
   with:
     repository: my-org/my-tools
     path: my-tools
-```
+      ```
 > - If your secondary repository is private you will need to add the option noted in [Checkout multiple repos (private)](#Checkout-multiple-repos-private)
 
 ## Checkout multiple repos (private)
@@ -242,7 +251,7 @@ Please refer to the [release page](https://github.com/actions/checkout/releases/
     repository: my-org/my-private-tools
     token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
     path: my-tools
-```
+      ```
 
 > - `${{ github.token }}` is scoped to the current repository, so if you want to checkout a different repository that is private you will need to provide your own [PAT](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
 
@@ -267,7 +276,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-```
+      ```
 
 ## Push a commit using the built-in token
 
@@ -286,7 +295,7 @@ jobs:
           git add .
           git commit -m "generated"
           git push
-```
+      ```
 *NOTE:* The user email is `{user.id}+{user.login}@users.noreply.github.com`. See users API: https://api.github.com/users/github-actions%5Bbot%5D
 
 ## Push a commit to a PR using the built-in token
@@ -310,10 +319,5 @@ jobs:
           git add .
           git commit -m "generated"
           git push
-```
+      ```
 *NOTE:* The user email is `{user.id}+{user.login}@users.noreply.github.com`. See users API: https://api.github.com/users/github-actions%5Bbot%5D
-
-
-# License
-
-The scripts and documentation in this project are released under the [MIT License](LICENSE)

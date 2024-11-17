@@ -1,6 +1,6 @@
 [![Build and Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
 
-# Checkout V4
+# Checkout V.5.0
 
 This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
 
@@ -281,8 +281,8 @@ jobs:
       - run: |
           date > generated.txt
           # Note: the following account information will not work on GHES
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+     git config user.name "github-DANISHAHMEDKM[138892774]"
+   git config user.email "138892774+github-DANISHAHMEDKM"[138892774]@users.noreply.github.com"
           git add .
           git commit -m "generated"
           git push
@@ -305,15 +305,9 @@ jobs:
       - run: |
           date > generated.txt
           # Note: the following account information will not work on GHES
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+     git config user.name "github-DANISHAHMEDKM[138892774]"
+          git config user.email " 
+"138892774+github+138892774@users.noreply.github.com"
           git add .
           git commit -m "generated"
           git push
-```
-*NOTE:* The user email is `{user.id}+{user.login}@users.noreply.github.com`. See users API: https://api.github.com/users/github-actions%5Bbot%5D
-
-
-# License
-
-The scripts and documentation in this project are released under the [MIT License](LICENSE)
